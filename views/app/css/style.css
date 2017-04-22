@@ -12,12 +12,9 @@ body,html{
 	height: 100%;
 	width: 100%;
 	background-color:#304660;
-	overflow-y: hidden;
-	overflow-x: hidden;
-	overflow: hidden;
+	color:#222222;
 }
 h1{
-	font-weight: 100;
 	color:#eee;
 	font-size:38px;
 }
@@ -27,6 +24,9 @@ b{
 a{
 	color:#eee;
 }
+main{
+	position:relative;
+}
 /** Navigation ********************************************************/
 nav{
 	width:100%;
@@ -34,6 +34,8 @@ nav{
 	position:fixed;
 	background-color:#222222;
 	height:60px;
+	z-index:100;
+	box-shadow:0 0 5px 0 rgba(0,0,0,0.75);
 }
 nav .logo{
 	width:50px;
@@ -76,9 +78,89 @@ nav .expand_toggle{
 /** User side panel ********************************************************/
 .usersidepanel {
 	width:240px;
-	background-color:#ffffff;
+	background-color:#eee;
+	height: calc(100% - 60px);
+	box-shadow:0 0 5px 0 rgba(0,0,0,0.75);
 }
 .usersidepanel .head{
 	width:100%;
 	background-color:#304660;
+	line-height:60px;
+	font-size:21px;
+	color:#fff;
+}
+.usersidepanel li{
+	display: table;
+	height:60px;
+	border-bottom:1px solid #ccc;
+	width:100%;
+	line-height:60px;
+}
+.usersidepanel li .img_con{
+	width:30px;
+	height:30px;
+	float:left;
+	margin:15px 8px 0 0;
+	background-color:#333;
+	border-radius:15px;
+	border:1px solid #ccc;
+}
+.usersidepanel .inner{
+	padding-left:10px;
+	display:table-cell;
+	veritcal-align:middle;
+}
+/** Sidebar ********************************************************/
+.sidebar{
+	position:absolute;
+	right:0px;
+	width:340px;
+	background-color:#eee;
+	height: calc(100% - 60px);
+	box-shadow:0 0 5px 0 rgba(0,0,0,0.75);
+	z-index:90;
+}
+.sidebar .head {
+	position:relative;
+	color:#fff;
+	height:220px;
+	background: #8ebf64;
+	background: -moz-linear-gradient(-45deg, #8ebf64 98%, #22b597 100%);
+	background: -webkit-linear-gradient(-45deg, #8ebf64 98%,#22b597 100%);
+	background: linear-gradient(135deg, #8ebf64 98%,#22b597 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ebf64', endColorstr='#22b597',GradientType=1 );
+}
+.sidebar .head .node_op{
+	background-color: rgba(0,0,0,0.30);
+	padding:12px;
+}
+.sidebar .head .node_op p{
+	font-size:11px;
+}
+.sidebar .head .node_stats{
+	padding:12px;
+	width:100%;
+	position:absolute;
+	bottom:0;
+	background-color: rgba(0,0,0,0.30);
+}
+.sidebar .head .node_stats li{
+	display:inline-block;
+	padding:4px 6px;
+}
+.sidebar .node_info{
+	background-color:#e3e3e3;
+	padding:12px;
+}
+.sidebar .node_info p{
+	font-weight:500;
+	font-size:14px;
+}
+
+.sidebar .node_info h1{
+	font-weight:800;
+	text-transform: uppercase;
+	font-size:21px;
+	color:#222;
+	margin-bottom:10px;
 }
