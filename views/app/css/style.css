@@ -138,7 +138,6 @@ nav .expand_toggle{
 	font-size:11px;
 }
 .sidebar .head .node_stats{
-	padding:12px;
 	width:100%;
 	position:absolute;
 	bottom:0;
@@ -146,7 +145,7 @@ nav .expand_toggle{
 }
 .sidebar .head .node_stats li{
 	display:inline-block;
-	padding:4px 6px;
+	padding:12px 6px;
 }
 .sidebar .node_info{
 	background-color:#e3e3e3;

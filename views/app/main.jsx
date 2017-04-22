@@ -41,6 +41,7 @@ class Maincontainer extends React.Component {
           </ul>
         </nav>
         <div className="navpush"></div>
+        {/*Sidebarleft*********************************************************/}
         <div className="sidebar">
           <div className="head">
             <div className="node_op">
@@ -62,7 +63,6 @@ class Maincontainer extends React.Component {
           </div>
         </div>
         {/*User side panel*********************************************************/}
-        <main>
           <div className="usersidepanel">
             <ul>
               <li className="head">
@@ -92,8 +92,6 @@ class Maincontainer extends React.Component {
               </li>
             </ul>
           </div>
-        {/*Sidebar*********************************************************/}
-        </main>
       </div>
     );
   }
