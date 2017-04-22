@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import Sidebarleft from './components/sidebar.jsx';
 require("./css/style.css");
 
 
@@ -38,16 +38,13 @@ class Maincontainer extends React.Component {
             <a className="nav_logo" href="#"><h1><i className="icon-spaceit_logo"></i>SPACE<b>IT</b></h1></a>
           </li>
         </ul>
-
-
         </nav>
+          <Sidebarleft />
       </div>
 
     );
   }
 }
-
-
 
 
 ReactDOM.render(
