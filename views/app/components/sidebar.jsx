@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from 'react-side';
+import Sidebar from 'react-sidebar';
 
 
 export default class Sidebarleft extends React.Component {
@@ -7,7 +7,7 @@ export default class Sidebarleft extends React.Component {
         super(props);
 
         this.state = {
-            sidebarOpen: false
+            sidebarOpen: true
         };
 
         this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
@@ -19,7 +19,7 @@ export default class Sidebarleft extends React.Component {
 
     render () {
 
-    let sidebarContent = (
+    let sidebarContent =
         <b>Sidebar content</b>;
 
     return (

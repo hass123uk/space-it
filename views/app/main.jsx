@@ -10,7 +10,6 @@ class Maincontainer extends React.Component {
     }
 
 
-
   render() {
     return (
       <div>
