@@ -1,50 +1,61 @@
-# ES6 React boilerplate using Webpack
+This repo is a boilerplate for React-Babel-Webpack project. You could use it as a base to build your own web app.
 
-[![Travis](https://img.shields.io/travis/KleoPetroff/react-webpack-boilerplate/master.svg?style=flat-square)](https://github.com/KleoPetroff/react-webpack-boilerplate) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+## Features
 
-Simple and optimized React boilerplate. It includes: 
+- Equip with React, ES6 & Babel 6
+- Lint with ESlint and Airbnb's style sheet.
+- Build with Webpack（support Webpack 1 & Webpack 2）
+- Support [hot module replacement](https://webpack.github.io/docs/hot-module-replacement.html)
+- Auto Open a new browser tab when Webpack loads, and reload the page when you modified the code
+- Use [Commitizen](https://github.com/commitizen/cz-cli) to produce commit message according to [AngularJS convention](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#-git-commit-guidelines)
+- Support git hook `pre-commit` used to lint and test your code
+- Support git hook `commit-msg` used to lint your [commit message](https://github.com/kentcdodds/validate-commit-msg)
+- Use [conventional-changelog](https://github.com/ajoslin/conventional-changelog) to generate `CHANGELOG.md`
 
-- [x] React 15.5.4
-- [x] ECMAScript 6 and JSX support
-- [x] React Router v4
-- [x] Latest Webpack (v.2.4.1) and Webpack Dev Server (v.2.4.2)
-- [x] Hot Module Replacement using [react-hot-loader](https://github.com/gaearon/react-hot-loader)
-- [x] SASS support
-- [x] Separate CSS stylesheets generation
-- [x] Automatic HTML generation
-- [x] Production Config
-- [x] Custom Babel Preset with Decorators, Class Properties, Rest/Spread operator support 
-- [x] ES6 Linting
-- [x] Export Separate Vendor Files
-- [ ] Redux
+## How to use
 
-## Starting the dev server
+First, clone the repo.
 
-Make sure you have Node.js installed.
+```bash
+$ git clone git@github.com:ruanyf/react-babel-webpack-boilerplate.git <yourAppName>
+$ cd <yourAppName>
+```
 
-1. `git clone https://github.com/KleoPetroff/react-webpack-boilerplate.git`
-2. Run `npm install` or `yarn install`
-3. Start the dev server using `npm start`
-3. Open [http://localhost:8080](http://localhost:8080)
+**Important**: `master` branch only supports Webpack 1. If you want to use Webpack 2, please switch to `webpack2` branch which will be the default branch in the near future.
 
-## Available Commands
+```bash
+# only run the command when you want to use Webpack 2
+$ git checkout webpack2
+```
 
-- `npm start` - start the dev server
-- `npm clean` - delete the dist folder
-- `npm run production` - create a production ready build in `dist` folder
-- `npm run lint` - execute an eslint check
-- `npm test` - run all tests
+Second, delete the old `.git` history and initialize new history.
 
-## Vendor Exporting
+```bash
+$ rm -rf .git
+$ git init
+```
 
-You can export specific vendors in separate files and load them. All vendors should be included in `app/vendors` and will be exported in a `vendors` folder under `dist`. The main idea is to serve independent JavaScript and CSS libraries, though currently all file formats are supported.
 
-! Don't forget to add the vendors in `app/index.html`.
+Third, install the dependencies.
 
-## Production code
+```bash
+$ npm install
+```
 
-Run `npm run production`. The production-ready code will be located under `dist` folder.
+Then, launch the boilerplate app.
 
-## Licence
+```bash
+$ npm start
+```
 
-_react-webpack-boilerplate_ is available under MIT.
+Now you should see a new browser window/tab opening and a title of "Hello World" in http://127.0.0.1:8080.
+
+Last, You need update `package.json` and modify fields like `name`, `version`, `description`, `keywords`, `author`, `license` and so on to fit your project.
+
+From there, you start to develop your own code in the `app` directory. When you finish coding, use `npm run build` or `npm run deploy` to build the static files.
+
+Attention, when committing your code, you should use [AngularJS's commit message convention](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#-git-commit-guidelines). Otherwise, the repo will throw an error. If you use `npm run commit` instead of `git commit`, the command will help you to produce a formatted commit message.
+
+## License
+
+MIT
