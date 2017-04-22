@@ -12,6 +12,9 @@ body,html{
 	height: 100%;
 	width: 100%;
 	background-color:#304660;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	overflow: hidden;
 }
 h1{
 	font-weight: 100;
@@ -74,7 +77,6 @@ nav .expand_toggle{
 .usersidepanel {
 	width:240px;
 	background-color:#ffffff;
-	box-shadow:0, 0, 0.5 #000;
 }
 .usersidepanel .head{
 	width:100%;

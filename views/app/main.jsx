@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Sidebarleft from './components/sidebar.jsx';
+import UserSidebar from './components/usersidebar.jsx';
 require("./css/style.css");
 
 
@@ -39,23 +40,9 @@ class Maincontainer extends React.Component {
           </ul>
         </nav>
         <div className="navpush"></div>
-        <div className="usersidepanel">
-          <ul>
-            <li className="head">
-              <h2>MEMBERS</h2>
-            </li>
-            <li>
-              <img /><h3>UserName</h3><p>Node creator</p>
-            </li>
-            <li>
-              <img /><h3>UserName</h3>
-            </li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-      </div>
 
+        
+      </div>
     );
   }
 }
