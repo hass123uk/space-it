@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+/** General ********************************************************/
 * {
 margin: 0;
 padding: 0;
@@ -8,7 +8,6 @@ text-decoration: none;
 font-family: 'Raleway', sans-serif;
 font-weight: 300;
 }
-
 body,html{
 	height: 100%;
 	width: 100%;
@@ -25,6 +24,7 @@ b{
 a{
 	color:#eee;
 }
+/** Navigation ********************************************************/
 nav{
 	width:100%;
 	color:#eee;
@@ -56,10 +56,27 @@ nav ul li{
 }
 nav .user{
 	background-color:#516484;
+	width:340px;
+	position:relative;
 }
 nav .expand_toggle{
 	width:60px;
 	padding:0;
 	text-align:center;
 	background-color:#3e5372;
+	position:absolute;
+	right:0;
+}
+.navpush{
+	height:60px;
+}
+/** User side panel ********************************************************/
+.usersidepanel {
+	width:240px;
+	background-color:#ffffff;
+	box-shadow:0, 0, 0.5 #000;
+}
+.usersidepanel .head{
+	width:100%;
+	background-color:#304660;
 }
